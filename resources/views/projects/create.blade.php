@@ -13,9 +13,13 @@
     <body>
 
         <div id="app" class="container">
+
             @include('projects.list')
 
             <form method="post" action="/projects" @submit.prevent="onSubmit" @keydown="form.errors.clear($event.target.name)">
+
+                {{ csrf_field() }}
+
                 <div class="control">
                     <label for="name" class="label">Project Name:</label>
 
@@ -42,8 +46,7 @@
         </div>
         <!-- /#app.container -->
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>
-        <script src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
+        <script src="/js/vendor.js"></script>
         <script src="/js/app.js"></script>
 
     </body>
