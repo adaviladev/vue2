@@ -13,6 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
+    // return redirect('/projects/create');
 });
 
 Route::get('/projects/create', 'ProjectsController@create');
