@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+    use App\Status;
+
+    Route::get('/', function () {
     return view('welcome');
     // return redirect('/projects/create');
 });
 
-Route::get('/projects/create', 'ProjectsController@create');
-Route::post('/projects', 'ProjectsController@store');
+    Route::get('/statuses' , 'StatusesController@index');
+    Route::post('/statuses' , 'StatusesController@store');
